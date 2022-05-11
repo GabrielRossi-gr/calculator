@@ -1,6 +1,8 @@
 # depslib dependency file v1.0
-1651762530 source:c:\users\gabri\documents\calculadora\main.c
+1652282372 source:c:\users\gabri\documents\calculadora\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
+
+1651799021 source:c:\users\gabri\documents\calculadora\img.rc
 

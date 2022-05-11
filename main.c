@@ -1,51 +1,118 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//#define PI 3.14
-int main()
-{
-    //calculadora
-//printf(PI);
-    printf("CALCULADORA \n");
-float n1,n2,resultado,funcao,x;
-int operacao;
-printf("digite um numero:");
-scanf("%f",&n1);
-printf("digite uma operacao matematica \n 1:soma, 2:subtracao, 3:multiplicacao, 4:divisao, 5:potenciacao  \n digite ->");
-scanf("%d",&operacao);
-printf("digite o outro numero:");
-scanf("%f",&n2);
 
-if(operacao == 1){
-    resultado=(n1+n2);
-}
-if(operacao == 2){
-    resultado=(n1-n2);
-}
-if(operacao == 3){
-    resultado=(n1*n2);
-}
-if(operacao == 4){
-    resultado=(n1/n2);
-}
-if(operacao == 5){
-    //raiz quadrada === resultado=(sqrt(n1));
-    //potenciacao
-    resultado=(pow(n1,n2));
-}
+int main(){
+int a,b,r,co,repetidor;
+char c,c1,c2,c3;
+printf("\n        CALCULADORA \n\n");
+fflush(stdin);
 
-//if(operacao == 6){
-//    resultado=(x*n2=n1);
-//}
-//if(x > 1){
-//    printf("\n\n raiz: ->%0.2f\n\n",x);
-//}
+    printf("iniciar conta? |s| or |n| :");
+    fflush(stdin);
+    scanf("%c",&c3);
+     fflush(stdin);
+if(c3 =='s'){
+    co=1;
+    while(co<=2){
 
-printf("\n\n RESULTADO ->%0.2f\n\n\n\n",resultado);
-printf("-----------------------------------------");
-scanf("%f",&x);
-//   futuro comando para fechar calculadora apertando qualquer tecla;
-//if(x != 1247123874235423){
-//    exit;
-//}
+                    printf("\n 'a' soma,\n 'b' Subtração,\n 'c' Divisão,\n 'd' Multiplicação,\n 'e' a^b potenciacao,\n 'f' raiz quadrada \n\n digite a letra :");
+                    scanf("\n %c",&c1);
+                    fflush(stdin);
+                    printf("--------------\n");
+
+            //soma
+            if(c1=='a'){
+                    printf("\n INTRUCAO: A + B = R \n");
+
+                      printf("\n -------------- \n\n\n\n\n");
+                    printf("\n valor 'A'  :");
+                    scanf("%d",&a);
+                    printf("\n valor 'B'  :");
+                    scanf("%d",&b);
+
+                r=a+b;
+             printf("\n######################### \n\n resultado :%d \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",r);
+            }
+            //subtração
+            if(c1=='b'){
+                printf("\n INTRUCAO: A - B = R \n");
+
+                  printf("\n -------------- \n\n\n\n\n");
+                    printf("\n valor 'A'  :");
+                    scanf("%d",&a);
+                    printf("\n valor 'B'  :");
+                    scanf("%d",&b);
+                    r=a-b;
+                  printf("\n######################### \n\n resultado :%d \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",r);
+
+            }
+            //divisão
+            if(c1=='c'){
+                printf("\n INTRUCAO: A / B = R \n");
+                    printf("\n -------------- \n\n\n\n\n");
+
+                    printf("\n valor 'A'  :");
+                    scanf("%d",&a);
+                    printf("\n valor 'B'  :");
+                    scanf("%d",&b);
+                r=a/b;
+                printf("\n######################### \n\n resultado :%d \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",r);
+
+            }
+            //multiplicação
+            if(c1=='d'){
+                    printf("\n INTRUCAO: A x B = R \n ");
+
+                     printf("\n -------------- \n\n\n\n\n");
+                    printf("\n valor 'A'  :");
+                    scanf("%d",&a);
+                    printf("\n valor 'B' :");
+                    scanf("%d",&b);
+                r=a*b;
+                 printf("\n######################### \n\n resultado :%d \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",r);
+
+            }
+            //potenciação
+            if(c1=='e'){
+                printf("\n INTRUCAO: A ^B = R \n");
+
+                 printf("\n -------------- \n\n\n\n\n");
+                    printf("\n valor 'A'  :");
+                    scanf("%d",&a);
+                    printf("\n valor 'B' :");
+                    scanf("%d",&b);
+                r=pow(a,b);
+                 printf("\n######################### \n\n resultado :%d \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",r);
+           }
+            //raiz quadrada
+            if(c1=='f'){
+                printf("\n INTRUCAO:  raiz de (A) \n ");
+
+                 printf("\n -------------- \n\n\n\n\n");
+                    printf("\n valor 'A'  :");
+                    scanf("%d",&a);
+
+                r=sqrt(a);
+                printf("\n######################### \n\n resultado :%d \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",r);
+            }
+
+        fflush(stdin);
+        printf("outra conta? |s| or |n| :");
+        scanf("%c",&c2);
+        fflush(stdin);
+
+        if(c2=='s'){
+            co--;
+        }
+        if(c2=='n'){
+            co=co+999;
+            printf("-----------");
+        }
+    }
+}
+if(c3=='n'){
+    printf("\n\n volte sempre! \n\n ");
+    }
 }
